@@ -3,7 +3,7 @@ This year im focused on C#.
 
 | Day  | Part1   |  Part2 |
 |---|---|---|
-|  1 |   |   |
+|  1 | :white_check_mark:  | :white_check_mark:  |
 | 2  |   |   |
 |  3 |   |   |
 | 4  |   |   |
