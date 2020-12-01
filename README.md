@@ -1,5 +1,5 @@
 # AdventOfCode2020
-This year im focused on C#.
+This year im focusing on C#.
 
 | Day  | Part1   |  Part2 |
 |---|---|---|
