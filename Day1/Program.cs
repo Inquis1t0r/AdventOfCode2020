@@ -6,13 +6,13 @@ namespace Day1
 {
     internal class Program
     {
-        static void findTriplets(int[] arr, int n, int sum)
+        static void findTriplets(int[] arr, int arrLength, int sum)
         {
             //TODO refactor and analyse 
-            for (int i = 0; i < n - 1; i++)
+            for (int i = 0; i < arrLength - 1; i++)
             {
                 HashSet<int> s = new HashSet<int>();
-                for (int j = i + 1; j < n; j++)
+                for (int j = i + 1; j < arrLength; j++)
                 {
                     int x = sum - (arr[i] + arr[j]);
                     if (s.Contains(x))
