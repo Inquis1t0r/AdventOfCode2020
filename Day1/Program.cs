@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace Day1
 {
@@ -24,10 +23,13 @@ namespace Day1
             for (int i = 0; i < numberListAsInts.Count - 1; i++)
                 for (int j = i + 1; j < numberListAsInts.Count; j++)
                 {
-                    Console.WriteLine("{0} against {1}", numberListAsInts[i], numberListAsInts[j]);
+                    var tempSumResult = numberListAsInts[i] + numberListAsInts[j];
+                    if (tempSumResult == searchedValue)
+                    {
+                        Console.WriteLine("Result numbers = " + numberListAsInts[i] +" "+ numberListAsInts[j]);
+                        Console.WriteLine("Multiplication of result numbers = " + numberListAsInts[i] * numberListAsInts[j]);
+                    }
                 }
-
-
         }
     }
 }
