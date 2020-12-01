@@ -8,6 +8,7 @@ namespace Day1
     {
         static void findTriplets(int[] arr, int n, int sum)
         {
+            //TODO refactor and analyse 
             for (int i = 0; i < n - 1; i++)
             {
                 HashSet<int> s = new HashSet<int>();
