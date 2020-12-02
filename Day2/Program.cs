@@ -78,23 +78,26 @@ namespace Day2
                 int pos2 = Int32.Parse(MinMaxValues[1]);
 
 
-               // Console.WriteLine("Min num " + minNumberOfLetters + " max num " + maxNumberOfLetters);
+                Console.WriteLine("Pos1 " + pos1 + " Pos2 " + pos2);
 
                 char letterToCheck = char.Parse(parts[1].Substring(0, 1));
                 String checkedPassword = parts[2];
-               // Console.WriteLine("Password to check: " + checkedPassword);
-              //  Console.WriteLine("Char to check: " + letterToCheck);
+                Console.WriteLine("Password to check: " + checkedPassword);
+                Console.WriteLine("Char to check: " + letterToCheck);
 
-                //int frequencyOfChar = line.Where(x => (x.Equals(letterToCheck))).Count();
-                int frequencyOfChar = line.Split(letterToCheck).Length - 2;  //This accutalu counts resulting subststrings
-                Console.WriteLine("Occurences of char: " + frequencyOfChar);
                 int temp = 0;
-                if (checkedPassword[pos1-1].Equals(letterToCheck))
+
+                if(pos2 >= checkedPassword.Length)
+                {
+                    continue;
+                }
+
+                if (checkedPassword[pos1+1].Equals(letterToCheck))
                 {
                     temp++;
                    // Console.WriteLine("Valid password");
                 }
-                if (checkedPassword[pos2-1].Equals(letterToCheck))
+                if (checkedPassword[pos2+1].Equals(letterToCheck))
                 {
                     temp++;
                     //Console.WriteLine("Valid password");
@@ -105,7 +108,7 @@ namespace Day2
                     validPasswordsCount++;
                 }
 
-
+                Console.WriteLine("temp " + temp);
                 Console.WriteLine();
 
             }
